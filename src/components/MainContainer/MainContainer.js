@@ -24,7 +24,7 @@ class MainContainer extends Component {
         <nav className="navbar navbar-inverse">
           <div className="container-fluid">
             <div className="navbar-header">
-              <a className="navbar-brand" href="#">React Redux Boilerplate</a>
+              <Link className="navbar-brand" to="/">React Redux Boilerplate</Link>              
             </div>
             <ul className="nav navbar-nav">
               <li><Link to="/">View1</Link></li>
