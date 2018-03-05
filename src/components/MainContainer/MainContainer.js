@@ -6,9 +6,18 @@ import View1 from '../View1/View1';
 import View2 from '../View2/View2';
 import View3 from '../View3/View3';
 import View4 from '../View4/View4';
+
+import { sampleActionDispatcher } from '../../actions/actions';
+import { connect } from 'react-redux';
+
 import './MainContainer.css';
 
 class MainContainer extends Component {
+
+  componentDidMount = () => {
+    this.props.dispatchSampleAction();
+  };  
+
   render() {
     return (
       <div className="MainContainer">
@@ -71,4 +80,10 @@ class MainContainer extends Component {
   }
 }
 
-export default withRouter(MainContainer);
+const mapStateToProps = (state, propsFromParent) => state;
+
+const mapDispatchToProps = dispatch => ({
+  dispatchSampleAction: () => dispatch(sampleActionDispatcher()),
+});
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MainContainer));
