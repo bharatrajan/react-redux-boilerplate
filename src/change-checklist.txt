@@ -1,0 +1,4 @@
+Changeables:
+- Title in index.html
+- Favicon.ico
+- README.md
